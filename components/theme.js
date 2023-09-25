@@ -1,5 +1,5 @@
-import { extendTheme } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
+import { extendTheme } from "@chakra-ui/react";
+import { mode } from '@chakra-ui/theme-tools';
 
 const styles = {
   global: props => ({
@@ -32,8 +32,7 @@ const components = {
 }
 
 const fonts = {
-  heading: "Montserrat, sans-serif",
-  body: "Montserrat, sans-serif",
+  heading: "'M PLUS Rounded 1c'"
 }
 
 const colors = {
@@ -45,5 +44,12 @@ const config = {
   useSystemColorMode: true
 }
 
-const theme = extendTheme({ config, styles, components, fonts, colors })
+const theme = extendTheme({
+  config,
+  styles,
+  components,
+  colors,
+  fonts
+})
+
 export default theme

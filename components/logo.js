@@ -29,7 +29,7 @@ const Logo = () => {
         <FootprintIcon />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily='Montserrat", sans-serif'
+          fontFamily='Montserrat, sans-serif'
           fontWeight="bold"
           ml={3}
         >
