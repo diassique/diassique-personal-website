@@ -53,6 +53,8 @@ const Navbar = props => {
       bg={useColorModeValue('#ffffff40', '#0F172A')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
+      pt={2} // Top padding
+      pb={2} // Bottom padding
       {...props}
     >
       <Container
@@ -77,8 +79,8 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/projects" path={path}>
+            Projects
           </LinkItem>
           <LinkItem href="/posts" path={path}>
             Posts
@@ -113,8 +115,8 @@ const Navbar = props => {
                 <MenuItem as={MenuLink} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Works
+                <MenuItem as={MenuLink} href="/projects">
+                  Projects
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/posts">
                   Posts

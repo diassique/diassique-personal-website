@@ -4,10 +4,7 @@ import {
   Box,
   Heading,
   Link,
-  SimpleGrid,
   Button,
-  List,
-  ListItem,
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
@@ -30,17 +27,17 @@ const Home = () => (
         mb={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        bg={useColorModeValue('gray.100', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a full-stack developer 👋
+        Hello, I&apos;m a software engineer! 👋
       </Box>
       <Box display={{md: 'flex'}}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Dias Mukash
           </Heading>
-          <p>Software Engineer ( Artist / Developer / Designer )</p>
+          <p>Software Engineer ( Developer & UX/UI Designer )</p>
           <p>Lorem ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet</p>
         </Box>
         <Box
@@ -60,7 +57,7 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/me.jpg"
               alt="Profile image"
               borderRadius="full"
               width="100"
@@ -73,7 +70,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Projects
         </Heading>
         <Paragraph>
           Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet.
@@ -81,7 +78,7 @@ const Home = () => (
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="/works"
+            href="/projects"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
