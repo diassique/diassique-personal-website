@@ -1,20 +1,8 @@
 import { forwardRef } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
-import {
-  Container,
-  Box,
-  Link,
-  Stack,
-  Heading,
-  Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Container, Box, Link, Stack, Heading, Flex, Menu, MenuItem,
+MenuList, MenuButton, IconButton, useColorModeValue } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -82,10 +70,10 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
+          <LinkItem href="/blog" path={path}>
+            Blog
           </LinkItem>
-          <LinkItem href="https://uses.craftz.dog/">Uses</LinkItem>
+          <LinkItem href="https://dribbble.com/diasmukash01">Design</LinkItem>
           <LinkItem
             target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage"
@@ -96,7 +84,7 @@ const Navbar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
+            Hire Me
           </LinkItem>
         </Stack>
 
@@ -112,18 +100,10 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/">
-                  About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/projects">
-                  Projects
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
-                  Posts
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://uses.craftz.dog/">
-                  Uses
-                </MenuItem>
+                <MenuItem as={MenuLink} href="/">About</MenuItem>
+                <MenuItem as={MenuLink} href="/projects">Projects</MenuItem>
+                <MenuItem as={MenuLink} href="/blog">Blog</MenuItem>
+                <MenuItem as={MenuLink} href="https://dribbble.com/diasmukash01">Design</MenuItem>
                 <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"

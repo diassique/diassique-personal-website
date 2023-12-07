@@ -11,19 +11,18 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   return (
-    (<Link href="/" scroll={false}>
+    <Link href="/" scroll={false}>
       <LogoBox>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily='Montserrat, sans-serif'
+          fontFamily='Inter, sans-serif'
           fontWeight="bold"
           alignItems="center"
-          
         >
           Dias Mukash
         </Text>
       </LogoBox>
-    </Link>)
+    </Link>
   );
 }
 

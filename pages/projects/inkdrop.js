@@ -15,17 +15,16 @@ const Work = () => (
   <Layout title="Inkdrop">
     <Container>
       <Title>
-        Inkdrop <Badge>2016-</Badge>
+        HireSphere <Badge>2023 -</Badge>
       </Title>
       <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $300k.
+        An online recruitment platform with AI chat for employers and job seekers
       </P>
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
+          <Meta>GitHub repo</Meta>
+          <Link href="https://github.com/diassique/fullstack-job-platform">
+            Go to the repository <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
@@ -34,14 +33,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>NodeJS, Electron, React Native</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Blogpost</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
-            How I’ve Attracted The First 500 Paid Users For My SaaS That Costs
-            $5/mo <ExternalLinkIcon mx="2px" />
-          </Link>
+          <span>MERN stack: MongoDB, Express.js, React.js, Node.js</span>
         </ListItem>
       </List>
 

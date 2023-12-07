@@ -3,12 +3,33 @@ import Fonts from '../components/fonts';
 import { AnimatePresence } from 'framer-motion';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../libs/theme';
-
-if (typeof window !== 'undefined') {
-  window.history.scrollRestoration = 'manual';
-}
+import { useEffect } from 'react';
 
 function Website({ Component, pageProps, router }) {
+
+  useEffect(() => {
+    // This code will run only on the client side
+    window.history.scrollRestoration = 'manual';
+
+    return () => {
+      // Optional: Resetting any settings when the component unmounts
+    };
+  }, []);
+
+  useEffect(() => {
+    // Set up any client-side-only effects or subscriptions here
+    const handleRouteChange = () => {
+      // Scroll to the top of the page on route changes
+      window.scrollTo({ top: 0 });
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
@@ -16,11 +37,7 @@ function Website({ Component, pageProps, router }) {
         <AnimatePresence
           mode="wait"
           initial={true}
-          onExitComplete={() => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 0 })
-            }
-          }}
+          onExitComplete={() => {}}
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>

@@ -32,8 +32,8 @@ const components = {
 }
 
 const fonts = {
-  heading: "Montserrat, sans-serif",
-  body: "Montserrat, sans-serif",
+  heading: "Inter, sans-serif",
+  body: "Inter, sans-serif",
 }
 
 const colors = {

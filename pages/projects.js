@@ -5,8 +5,7 @@ import {
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
+import thumbHireSphere from '../public/images/hiresphere-banner.jpg'
 import Layout from '../components/layouts/article'
 
 const Projects = () => {
@@ -19,23 +18,23 @@ const Projects = () => {
 
         <SimpleGrid columns={[1,1,2]} gap={6}>
           <Section>
-            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbInkdrop}>
+            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
               An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="walknote" title="walknote" thumbnail={thumbWalknote}>
-              Music recommendation app for iOS
+            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
+              An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="walknote" title="walknote" thumbnail={thumbWalknote}>
-              Music recommendation app for iOS
+            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
+              An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="walknote" title="walknote" thumbnail={thumbWalknote}>
-              Music recommendation app for iOS
+            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
+              An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
         </SimpleGrid>

@@ -1,13 +1,5 @@
 import NextLink from 'next/link'
-import {
-  Container,
-  Box,
-  Heading,
-  Link,
-  Button,
-  useColorModeValue,
-  chakra
-} from '@chakra-ui/react'
+import { Container, Box, Heading, Link, Button, useColorModeValue, chakra } from '@chakra-ui/react'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -30,16 +22,17 @@ const Home = () => (
         bg={useColorModeValue('gray.100', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a software engineer! 👋
+        Hello, I&apos;m experienced software engineer! 👋
       </Box>
       <Box display={{md: 'flex'}}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Dias Mukash
           </Heading>
-          <p>Software Engineer ( Developer & UX/UI Designer )</p>
-          <p>Lorem ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet</p>
+          <p>Software Engineer (Developer & UX/UI Designer)</p>
+          <p>I&apos;m Dias, a 22-year-old software engineer with a heart that beats in binary and a mind that dreams in code 💻. At the crossroads of technology and innovation, I find my calling.</p>
         </Box>
+        
         <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
@@ -67,13 +60,14 @@ const Home = () => (
 
         </Box>
       </Box>
-
-      <Section delay={0.1}>
+      
+      {/* Projects section */}
+      <Section delay={0.1} pt={14}>
         <Heading as="h3" variant="section-title">
           Projects
         </Heading>
         <Paragraph>
-          Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet.
+          As a T-shaped professional, I possess a broad knowledge base in various aspects of technology, including design, allowing me to approach challenges with a holistic perspective. My journey transcends mere code development; it involves infusing vitality into concepts, transforming intricate issues into streamlined solutions, and perpetually enhancing my skills amidst the dynamic tapestry of the digital domain.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
@@ -83,11 +77,22 @@ const Home = () => (
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
           >
-            Portfolio
+            My Portfolio
           </Button>
         </Box>
       </Section>
-      <Section delay={0.2}>
+
+      {/* Skills section */}
+      <Section delay={0.2} pt={14}>
+        <Heading as="h3" variant="section-title">
+          Skills
+        </Heading>
+        <Paragraph>
+          sdfdsf
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -99,30 +104,26 @@ const Home = () => (
           <BioYear>2010</BioYear>
           Completed bla bla bla
         </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed bla bla bla
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed bla bla bla
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed bla bla bla
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed bla bla bla
-        </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           I love ❤️
         </Heading>
         <Paragraph>
           Art, Music, {' '}
+          <Link href="https://illust.odoruinu.net/">
+            Drawing
+          </Link>
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.5}>
+        <Heading as="h3" variant="section-title">
+          My CV
+        </Heading>
+        <Paragraph>
+          Feel free to download my CV
           <Link href="https://illust.odoruinu.net/">
             Drawing
           </Link>
