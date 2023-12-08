@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../libs/theme';
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 function Website({ Component, pageProps, router }) {
 
@@ -17,9 +18,7 @@ function Website({ Component, pageProps, router }) {
   }, []);
 
   useEffect(() => {
-    // Set up any client-side-only effects or subscriptions here
     const handleRouteChange = () => {
-      // Scroll to the top of the page on route changes
       window.scrollTo({ top: 0 });
     };
 
@@ -41,6 +40,7 @@ function Website({ Component, pageProps, router }) {
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
+        <Analytics />
       </Layout>
     </ChakraProvider>
   );

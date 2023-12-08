@@ -1,11 +1,34 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Link, Button, useColorModeValue, chakra } from '@chakra-ui/react'
+import { 
+  Container,
+  Box, 
+  Heading, 
+  Link, 
+  List, 
+  ListItem, 
+  Button, 
+  useColorModeValue, 
+  chakra, 
+  SimpleGrid,
+  IconButton,
+  Flex,
+} from '@chakra-ui/react'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Image from 'next/image'
+import { GridItem } from '../components/grid-item'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoDiscord,
+  IoLogoLinkedin,
+  IoLogoTelegram
+} from 'react-icons/io5'
+import { FaTelegram } from "react-icons/fa";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -32,7 +55,6 @@ const Home = () => (
           <p>Software Engineer (Developer & UX/UI Designer)</p>
           <p>I&apos;m Dias, a 22-year-old software engineer with a heart that beats in binary and a mind that dreams in code 💻. At the crossroads of technology and innovation, I find my calling.</p>
         </Box>
-        
         <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
@@ -57,9 +79,52 @@ const Home = () => (
               height="100"
             />
           </Box>
-
         </Box>
       </Box>
+
+      {/* Social Media Links */}
+      <Flex align="center" mt={4} justifyContent="left" gap={4}>
+        <Link href="https://github.com/yourusername" isExternal>
+          <IconButton
+            icon={<IoLogoGithub />}
+            variant="outline"
+            size="lg"
+            colorScheme="gray"
+            aria-label="GitHub"
+            isRound={true}
+          />
+        </Link>
+        <Link href="https://instagram.com/yourusername" isExternal>
+          <IconButton
+            icon={<IoLogoLinkedin />} // Replace with the correct icon for Instagram if needed
+            variant="outline"
+            size="lg"
+            colorScheme="gray"
+            aria-label="Instagram"
+            isRound={true}
+          />
+        </Link>
+        <Link href="https://discord.com/yourusername" isExternal>
+          <IconButton
+            icon={<IoLogoDiscord />}
+            variant="outline"
+            size="lg"
+            colorScheme="gray"
+            aria-label="Discord"
+            isRound={true}
+          />
+        </Link>
+        <Link href="https://t.me/diassique" isExternal>
+          <IconButton
+            icon={<FaTelegram />}
+            variant="outline"
+            size="lg"
+            colorScheme="gray"
+            aria-label="Telegram"
+            isRound={true}
+          />
+        </Link>
+      </Flex>
       
       {/* Projects section */}
       <Section delay={0.1} pt={14}>
@@ -129,6 +194,48 @@ const Home = () => (
           </Link>
         </Paragraph>
       </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoInstagram />}
+              >
+                @diasmks
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoInstagram />}
+              >
+                @diasmks
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoInstagram />}
+              >
+                @diasmks
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
+      </Section>
+
     </Container>
   </Layout>
 )

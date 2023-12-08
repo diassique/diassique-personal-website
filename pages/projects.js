@@ -23,7 +23,7 @@ const Projects = () => {
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
+            <WorkGridItem id="inkdrop" title="Prompter" thumbnail={thumbHireSphere}>
               An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
