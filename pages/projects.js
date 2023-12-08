@@ -27,21 +27,7 @@ const Projects = () => {
               An online recruitment platform with AI chat for employers and job seekers
             </WorkGridItem>
           </Section>
-          <Section>
-            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
-              An online recruitment platform with AI chat for employers and job seekers
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkdrop" title="HireSphere" thumbnail={thumbHireSphere}>
-              An online recruitment platform with AI chat for employers and job seekers
-            </WorkGridItem>
-          </Section>
         </SimpleGrid>
-
-        <Section delay={0.4} fontSize={20} mb={4}>
-          Old projects
-        </Section>
       </Container>
     </Layout>
   )

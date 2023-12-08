@@ -9,7 +9,6 @@ import {
   Button, 
   useColorModeValue, 
   chakra, 
-  SimpleGrid,
   IconButton,
   Flex,
 } from '@chakra-ui/react'
@@ -19,16 +18,14 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Image from 'next/image'
-import { GridItem } from '../components/grid-item'
 import {
-  IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
-  IoLogoDiscord,
   IoLogoLinkedin,
-  IoLogoTelegram
 } from 'react-icons/io5'
 import { FaTelegram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -84,7 +81,7 @@ const Home = () => (
 
       {/* Social Media Links */}
       <Flex align="center" mt={4} justifyContent="left" gap={4}>
-        <Link href="https://github.com/yourusername" isExternal>
+        <Link href="https://github.com/diassique" isExternal>
           <IconButton
             icon={<IoLogoGithub />}
             variant="outline"
@@ -94,23 +91,23 @@ const Home = () => (
             isRound={true}
           />
         </Link>
-        <Link href="https://instagram.com/yourusername" isExternal>
+        <Link href="https://www.linkedin.com/in/dias-mukash-5116631b6/" isExternal>
           <IconButton
             icon={<IoLogoLinkedin />} // Replace with the correct icon for Instagram if needed
             variant="outline"
             size="lg"
             colorScheme="gray"
-            aria-label="Instagram"
+            aria-label="Linkedin"
             isRound={true}
           />
         </Link>
-        <Link href="https://discord.com/yourusername" isExternal>
+        <Link href="https://twitter.com/diasmks" isExternal>
           <IconButton
-            icon={<IoLogoDiscord />}
+            icon={<FaXTwitter />}
             variant="outline"
             size="lg"
             colorScheme="gray"
-            aria-label="Discord"
+            aria-label="Twitter"
             isRound={true}
           />
         </Link>
@@ -147,27 +144,18 @@ const Home = () => (
         </Box>
       </Section>
 
-      {/* Skills section */}
-      <Section delay={0.2} pt={14}>
+      {/*  */}
+      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Skills
         </Heading>
-        <Paragraph>
-          sdfdsf
-        </Paragraph>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
         <BioSection>
-          <BioYear>2001</BioYear>
-          Born in Almaty, Kazakhstan.
+          <BioYear>Frameworks & Languages:</BioYear>
+          HTML, CSS, JavaScript, React.js, Vue.js, Next.js, Node.js, 
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed bla bla bla
+          <BioYear>Other Tools:</BioYear>
+          Git, MongoDB, MySQL, PostgreSQL
         </BioSection>
       </Section>
 
